@@ -3,8 +3,7 @@ use command_extra::CommandExtra;
 use derive_more::{Display, Error};
 use pipe_trait::Pipe;
 use std::{
-    fs,
-    io::{self, Write},
+    fs, io,
     process::{Command, Output},
 };
 use tempfile::tempdir;
@@ -64,8 +63,6 @@ where
             stdout,
             stderr,
         } = output;
-
-        io::stderr().write_all(&stderr).pipe(drop);
 
         if status.success() {
             return Ok(None);
