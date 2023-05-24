@@ -1,6 +1,6 @@
 [package]
 name = "exec-diff"
-version = "0.0.0"
+version = "0.1.0"
 description = "A small utility to execute the GNU diff command"
 edition = "2021"
 authors = ["khai96_ <hvksmr1996@gmail.com>"]
