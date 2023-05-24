@@ -32,7 +32,7 @@ where
     /// Use the GNU `diff` command to compare two strings.
     ///
     /// **Return:**
-    /// * `Err(_)` means that the `diff` command was failed to executed or status > 1
+    /// * `Err(error)` means that the `diff` command was failed to executed or status > 1
     /// * `Ok(None)` means that no diff was found (status = 0).
     /// * `Ok(Some(diff))` means that there was diff (status = 1).
     pub fn exec(&self) -> Result<Option<String>, DiffExecError> {
