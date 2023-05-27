@@ -58,13 +58,13 @@ impl<Left, Right> Diff<Left, Right> {
         }
     }
 
-    /// Set color mode.
+    /// Set color mode. Default is [`Color::Always`].
     pub const fn color(mut self, color: Color) -> Self {
         self.color = color;
         self
     }
 
-    /// Set diff format.
+    /// Set diff format. Default is `true`.
     pub const fn unified(mut self, unified: bool) -> Self {
         self.unified = unified;
         self
